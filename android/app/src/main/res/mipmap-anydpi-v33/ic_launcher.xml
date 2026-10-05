@@ -1,0 +1,1 @@
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android"><background android:drawable="@color/nas_icon_blue"/><foreground android:drawable="@drawable/ic_nas_foreground"/><monochrome android:drawable="@drawable/ic_nas_foreground"/></adaptive-icon>

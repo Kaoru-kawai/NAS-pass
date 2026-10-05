@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101d32">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>NAS Pass</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div><span class="eyebrow">YOUR CLUB, ONE TAP</span><h1>NAS <span>Pass</span></h1></div><button id="settings" class="icon" aria-label="設定">⚙</button></header>
+  <main>
+    <nav aria-label="パスの切り替え"><button id="memberTab" aria-selected="true">会員証</button><button id="towelTab" aria-selected="false">タオル</button></nav>
+    <div id="deck">
+      <section id="member" class="pass" aria-labelledby="memberTitle">
+        <div class="card-top"><span class="badge">MEMBER</span><span class="small">スポーツクラブ NAS</span></div>
+        <h2 id="memberTitle">いつものジムへ。</h2><p class="subtitle">入館用の会員証</p>
+        <div class="qr-area empty"><span class="symbol" aria-hidden="true">▦</span><h3>会員証の連携を準備中</h3><p>自動ログインの設定が完了すると、<br>ここに会員証を表示します。</p></div>
+        <a class="primary" href="https://mypage.nas-club.co.jp/mypage/?openExternalBrowser=1" target="_blank" rel="noopener noreferrer">NASマイページを開く ↗</a>
+        <p class="note">現在は公式サイトでログインしてください。</p>
+      </section>
+      <section id="towel" class="pass" aria-labelledby="towelTitle" hidden>
+        <div class="card-top"><span class="badge towel">TOWEL</span><span class="small">レンタル用QR</span></div>
+        <h2 id="towelTitle">タオルを、さっと。</h2><p class="subtitle">保存した画像をそのまま表示</p>
+        <div id="towelEmpty" class="qr-area empty"><span class="symbol" aria-hidden="true">▧</span><h3>タオル用QRを登録</h3><p>撮影済みの写真やスクリーンショットを<br>1枚選んでください。</p></div>
+        <button id="imageView" aria-label="タオル用QR画像を拡大" hidden><img id="towelImage" alt="タオルレンタル用QRコード"></button>
+        <label class="primary" for="imageInput" id="imageLabel">画像を選ぶ</label><input id="imageInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+        <p class="note">画像はこの端末のブラウザ内だけに保存します。</p>
+      </section>
+    </div>
+    <div class="pager" aria-hidden="true"><span class="active"></span><span></span></div><p class="swipe-hint">← スワイプして切り替え →</p>
+    <p id="status" role="status"></p>
+  </main>
+  <footer>今日も、自分のペースで。</footer>
+  <dialog id="settingsDialog"><h2>設定</h2><p>タオル用画像はこのブラウザ内に保存されます。ブラウザのデータを消すと、画像の再登録が必要です。</p><p>自動ログインは未接続です。パスワードを保存する機能はまだありません。</p><button id="removeImage" class="secondary">タオル画像を削除</button><button id="closeSettings" class="primary">閉じる</button></dialog>
+  <dialog id="zoomDialog"><button id="closeZoom" class="secondary">閉じる</button><img id="zoomImage" alt="拡大したタオルレンタル用QRコード"></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

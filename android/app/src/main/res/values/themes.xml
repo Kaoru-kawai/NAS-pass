@@ -1,0 +1,20 @@
+<resources>
+    <style name="Theme.NASPass" parent="Theme.Material3Expressive.Light.NoActionBar">
+        <item name="colorPrimary">#215BD6</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#DDE7FF</item>
+        <item name="colorOnPrimaryContainer">#123272</item>
+        <item name="colorSecondary">#426056</item>
+        <item name="colorSecondaryContainer">#D5EEE1</item>
+        <item name="colorOnSecondaryContainer">#193B2E</item>
+        <item name="colorSurface">#F8F9FF</item>
+        <item name="colorSurfaceContainer">#EBEFFA</item>
+        <item name="colorOnSurface">#172033</item>
+        <item name="colorOnSurfaceVariant">#586174</item>
+        <item name="colorOutline">#747D90</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:fontFamily">@font/nas_sans</item>
+        <item name="fontFamily">@font/nas_sans</item>
+    </style>
+</resources>
